@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.pudorys {
+    position: relative;
+    display: flex;
+    overflow-x: scroll;
+    width: auto;
+    height: 718px;
+    flex-wrap: nowrap;
+    transition: ease 200ms;
+
+}
+
+.pudorys_bigger {
+    height: 312px !important;
+}
+
+.div_fullscreen {
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.pudorys::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.pudorys::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.pudorys::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.smaller_container {
+    transform: scale(0.62);
+    transform-origin: top left;
+    position: relative;
+}
+
+.bigger_container {
+    transform: scale(0.23);
+    transform-origin: top left;
+    position: relative;
+}
+
+.img_res_container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.smaller-text {
+    padding: .5rem !important;
+    font-size: .825rem !important;
+}
+
+.flex {
+    flex: 1;
+}
+
+.reservations_container::-webkit-scrollbar {
+    display: none;
+}
+
+.reservations_container {
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 1%;
+    min-width: 97%;
+    min-height: 97%;
+    max-height: 97%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 1rem 0 0 0;
+    color: white;
+}
+
+.res-div:hover {
+    transition: ease-in-out 3s;
+}
+
+.reservations_content p {
+    font-size: 1.20em;
+}
+
+.reservations_content {
+    padding: 5%;
+    text-align: left;
+    margin: auto;
+    border: 40px;
+}
+
+.res-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.overlay-room {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+}
+
+.available-room {
+    background: rgba(46, 187, 13, .4);
+}
+
+.available-room-disabled {
+    background: rgba(0, 0, 0, .2);
+}
+
+.occupied_room {
+    background: rgba(144,15,10,0.8);
+}
+
+.fullscreen-icon {
+    background: white;
+    width: 25px;
+    height: 25px;
+    right: 1rem;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+}
+
+.fullscreen-icon:hover {
+    transition: ease-in-out .5s;
+    transform: scale(1.1);
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+@media screen and (max-width: 849px) {
+    #search_form, #reservation_form {
+        width: 100% !important;
+    }
+
+    #reservation_form {
+        margin-top: 2rem !important;
+    }
+
+    #reservation_form form {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 850px){
+    #search_form, #reservation_form {
+        width: 50% !important;
+    }
+}
